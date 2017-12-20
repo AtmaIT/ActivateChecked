@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #f4f4f4;
+}
+
+.container {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+h1 {
+    color: #999;
+    font-size: 32px;
+    font-weight: 100;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    color: #4fd8ff;
+    font-weight: 100;
+    margin: 30px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+table tr.active td:first-child {
+    box-shadow: inset 4px 0 0 #4fd8ff;
+}
+
+table tr td {
+    height: 40px;
+    padding: 0 10px;
+    transition: all 0.3s linear;
+}
+
+table tr:nth-child(2n + 1) {
+    background: #EEE;
+}

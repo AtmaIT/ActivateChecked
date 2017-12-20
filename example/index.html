@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test ActivateChecked</title>
+    <link rel="stylesheet" href="css/style.css">    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="../src/jquery.activateChecked.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>ActivateChecked - Example</h1>
+
+        <h2>Checkbox:</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Matheus</td>
+                    <td>19 anos</td>
+                    <td><input type="checkbox" name="usercheck"></td>
+                </tr>
+                <tr>
+                    <td>Joao</td>
+                    <td>32 anos</td>
+                    <td><input type="checkbox" name="usercheck"></td>
+                </tr>
+                <tr>
+                    <td>Eduardo</td>
+                    <td>22 anos</td>
+                    <td><input type="checkbox" name="usercheck"></td>
+                </tr>
+                <tr>
+                    <td>Ana</td>
+                    <td>21 anos</td>
+                    <td><input type="checkbox" name="usercheck"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Radio:</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Matheus</td>
+                    <td>19 anos</td>
+                    <td><input type="radio" name="user"></td>
+                </tr>
+                <tr>
+                    <td>Joao</td>
+                    <td>32 anos</td>
+                    <td><input type="radio" name="user"></td>
+                </tr>
+                <tr>
+                    <td>Eduardo</td>
+                    <td>22 anos</td>
+                    <td><input type="radio" name="user"></td>
+                </tr>
+                <tr>
+                    <td>Ana</td>
+                    <td>21 anos</td>
+                    <td><input type="radio" name="user"></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <script>
+        var lines = $('table tr');
+        lines.activateChecked('input');
+
+        lines.on('ac:start', function() {
+            console.log('start checked in:', this);
+        });
+
+        lines.on('ac:finish', function() {
+            console.log('finish checked in:', this);
+        });
+    </script>
+</body>
+</html>
