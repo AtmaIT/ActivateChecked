@@ -3,8 +3,6 @@
 ## Introdução:
 Activate-Checked é um plugin JQuery para resolver problemas de clicks em elementos com inputs. A proposta é tornar facil a ampliação da zona de click para marcar inputs do tipo checked and radio.
 
-Demo: https://jsfiddle.net/MatheusBordin/skn1c3hu/
-
 ## Features:
 
 1. Events:
