@@ -69,7 +69,11 @@
 
     <script>
         var lines = $('table tr');
-        lines.activateChecked('input');
+        lines.activateChecked('input', {
+           onload: function() {
+               console.log('loading plugin...');
+           } 
+        });
 
         lines.on('ac:start', function() {
             console.log('start checked in:', this);
